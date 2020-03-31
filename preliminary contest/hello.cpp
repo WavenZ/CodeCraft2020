@@ -22,18 +22,18 @@ struct Node{
     Node(uint32_t f) : from(f), state(0), degree(0) {}
 };
 
-void read(unordered_map<uint32_t, Node*> &data){
+void read(unordered_map<uint32_t, Node*> &records){
     uint32_t from, to, amount;
     FILE* fp = fopen(data_file, "r");
     while(fscanf(fp, "%d,%d,%d", &from, &to, &amount) > 0){
-        if(!data.count(from))
-            data[from] = new Node(from);
-        if(!data.count(to))
-            data[to] = new Node(to);
-        data[from]->from = from;
-        data[from]->to.push_back(data[to]);
-        data[from]->amount = amount;
-        data[to]->degree ++;
+        if(!records.count(from))
+            records[from] = new Node(from);
+        if(!records.count(to))
+            records[to] = new Node(to);
+        records[from]->from = from;
+        records[from]->to.push_back(records[to]);
+        records[from]->amount = amount;
+        records[to]->degree ++;
     }
     fclose(fp);
 }

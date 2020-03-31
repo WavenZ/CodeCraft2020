@@ -1,5 +1,5 @@
 /*
-    2020/3/31 @WavenZ
+    2020/3/31 by WavenZ
 */
 #include <iostream>
 #include <vector>

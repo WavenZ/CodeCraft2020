@@ -11,3 +11,4 @@
         - (可能提示没有权限创建文件，以 sudo 权限运行即可)
     - test_data_xxxx.txt : 数据集，其中xx为环的个数
     - answer_xxxx.txt : 与数据集对应的答案
+    - log.txt : 测试日志文件，可用于排查错误

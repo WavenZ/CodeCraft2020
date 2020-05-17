@@ -1,11 +1,10 @@
 # CodeCraft2020
 
-1. warmup
-    - hello.cpp : 热身赛 final 代码
- 
-2. preliminary contest
-    - main.cpp : 初赛 baseline 代码
-    - test.sh : 批量测试脚本，可用于测试路径、答案等是否正确。用法 : 
+- main63.cpp : 6+3 版本代码，线下4.8x, 线上2.6x。（线下为1963w数据，下同）
+- main43.cpp : 4+3 版本代码，线下5.5x, 线上2.3x。
+
+
+- test.sh : 批量测试脚本，可用于测试路径、答案等是否正确。用法 : 
         - 添加执行权限：`chmod u+x test.sh`
         - 测试：`./test.sh main.cpp`
         - (可能提示没有权限创建文件，以 sudo 权限运行即可)

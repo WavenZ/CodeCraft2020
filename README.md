@@ -12,3 +12,7 @@
     - test_data_xxxx.txt : 数据集，其中xx为环的个数
     - answer_xxxx.txt : 与数据集对应的答案
     - log.txt : 测试日志文件，可用于排查错误
+
+2. 基本思路
+
+2.1 建图 

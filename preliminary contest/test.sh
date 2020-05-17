@@ -1,14 +1,16 @@
 #!/bin/bash
 
-test_file[0]="test_data_56.txt"
-test_file[1]="test_data_3738.txt"
-test_file[2]="test_data_58284.txt"
-test_file[3]="test_data_1004812.txt"
+test_file[0]="test_data_43.txt"
+test_file[1]="test_data_9153.txt"
+test_file[2]="test_data_697518.txt"
+test_file[3]="test_data_19630345.txt"
 
-answer_file[0]="answer_56.txt"
-answer_file[1]="answer_3738.txt"
-answer_file[2]="answer_58284.txt"
-answer_file[3]="answer_1004812.txt"
+
+answer_file[0]="result_43.txt"
+answer_file[1]="result_9153.txt"
+answer_file[2]="result_697518.txt"
+answer_file[3]="result_19630345.txt"
+
 
 if [ "$2" = "DDEBUG" ]
 then 
@@ -40,6 +42,10 @@ for ((i=0;i<${#test_file[@]};i++))
 do
     echo ${test_file[$i]}
     cp ${test_file[$i]} /data/test_data.txt
+    if [ -f "/projects/student/result.txt" ]
+    then
+        rm /projects/student/result.txt
+    fi
     time ./test
     if [ -f "/projects/student/result.txt" ]
     then
